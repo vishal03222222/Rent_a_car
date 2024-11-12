@@ -1,10 +1,21 @@
-import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+// import "./App.css"; // Your custom styles (optional)
 
 class HeroSection extends Component {
+  openNav = () => {
+    document.getElementById("myNav").style.width = "100%";
+  };
+
+  closeNav = () => {
+    document.getElementById("myNav").style.width = "0%";
+  };
+
   render() {
     return (
       <div className="hero_area">
+        {/* Header Section */}
         <header className="header_section">
           <div className="container-fluid">
             <nav className="navbar navbar-expand-lg custom_nav-container">
@@ -13,16 +24,19 @@ class HeroSection extends Component {
               </a>
               <div className="navbar-collapse">
                 <div className="user_option">
-                  <a href="">Login</a>
+                  <a href="/">Login</a>
                 </div>
                 <div className="custom_menu-btn">
-                  <button onClick={() => this.openNav()}>
-                    <span className="s-1"></span>
-                    <span className="s-2"></span>
-                    <span className="s-3"></span>
+                  <button onClick={this.openNav}>
+                    <span className="s-1"> </span>
+                    <span className="s-2"> </span>
+                    <span className="s-3"> </span>
                   </button>
                 </div>
                 <div id="myNav" className="overlay">
+                  <button className="closebtn" onClick={this.closeNav}>
+                    &times;
+                  </button>
                   <div className="overlay-content">
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a>
@@ -36,6 +50,7 @@ class HeroSection extends Component {
             </nav>
           </div>
         </header>
+        {/* Slider Section */}
         <section className="slider_section position-relative">
           <div className="slider_container">
             <div className="img-box">
@@ -55,7 +70,7 @@ class HeroSection extends Component {
                         Experts <br />
                         Service
                       </h1>
-                      <a href="">Contact Us</a>
+                      <a href="/">Contact Us</a>
                     </div>
                   </div>
                   <div className="carousel-item">
@@ -65,7 +80,7 @@ class HeroSection extends Component {
                         Experts <br />
                         Service
                       </h1>
-                      <a href="">Contact Us</a>
+                      <a href="/">Contact Us</a>
                     </div>
                   </div>
                   <div className="carousel-item">
@@ -75,7 +90,7 @@ class HeroSection extends Component {
                         Experts <br />
                         Service
                       </h1>
-                      <a href="">Contact Us</a>
+                      <a href="/">Contact Us</a>
                     </div>
                   </div>
                 </div>
@@ -101,7 +116,7 @@ class HeroSection extends Component {
         </section>
       </div>
     );
-  }
-}
+  };
+};
 
 export default HeroSection;
