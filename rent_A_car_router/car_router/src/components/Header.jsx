@@ -11,14 +11,14 @@ class Header extends Component {
     };
   render(){
     return (
-        <div style={{backgroundColor:"blue"}}> 
+        <div style={{backgroundColor:"black", height:"50px"}}> 
             <div className="navbar-collapse">
                 {/* <div className="user_option">
                   <a href="/">Login</a>
                 </div> */}
                 <div className="user_option-btn">
-                    <button onClick={this.openNav}>
-                        <span className="s-1"> </span>
+                    <button onClick={this.openNav} style={{width:'500px', textAlign:'center'}}>
+                        <span className="s-1"> CLICK HERE TO OPTIONS</span>
                         <span className="s-2"> </span>
                         <span className="s-3"> </span>
                     </button>
